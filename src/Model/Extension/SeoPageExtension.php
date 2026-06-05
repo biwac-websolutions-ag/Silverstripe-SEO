@@ -197,7 +197,7 @@ class SeoPageExtension extends Extension
         $metapreview = MetaPreviewField::create($this->owner);
 
         // Meta
-        $title = TextField::create('MetaTitle', _t(__CLASS__ . '.META_TITLE', 'Meta title'))->setMaxLength(60);
+        $title = TextField::create('MetaTitle', _t(__CLASS__ . '.META_TITLE', 'Meta title'));
         if ($this->owner->MetaTitle == '') {
 			$title->setDescription(_t(__CLASS__ . '.META_TITLE_DESCRIPTION', 'Enter a unique and include the target keyword for page ranking. Max 60 characters.') . '<br /><p class="message warning">' .
 				sprintf(_t(__CLASS__ . '.META_TITLE_EMPTY_WARNING', 'The meta title is empty. The page title (%s) will be used if not set.'),
